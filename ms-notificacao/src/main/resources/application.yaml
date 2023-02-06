@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: ms-notificacao
+  rabbitmq:
+    host: ${rabbit_host:localhost}
+    port: 5672
+    username: admin
+    password: admin
+    virtual-host: local-vh
+
+user:
+  queue:
+    name-create: create-user
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://${discovery_host:localhost}:8761/eureka
